@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-main: #FFFFFF;
+        --bg-panel: #F6F7FB;
+        --text-ink: #14162B;
+        --text-muted: #5B5E76;
+        --text-faint: #9799AD;
+        --border-color: #E3E4ED;
+        --accent-main: #2F3A8F;
+        --accent-soft: #ECEEFA;
+        --accent-warm: #B9791F;
+        
+        /* Status Colors Light */
+        --status-pending-bg: #FBF1E1;
+        --status-pending-text: #8A5A17;
+        --status-process-bg: #ECEEFA;
+        --status-process-text: #2F3A8F;
+        --status-done-bg: #E9F3EC;
+        --status-done-text: #2E6B4B;
+        --status-cancel-bg: #FBEAE7;
+        --status-cancel-text: #A33F2C;
+    }
+
+    [data-theme="dark"] {
+        --bg-main: #111327;
+        --bg-panel: #1A1C36;
+        --text-ink: #F1F1F6;
+        --text-muted: #A7A9C4;
+        --text-faint: #6E7096;
+        --border-color: #2A2C4C;
+        --accent-main: #7C88F0;
+        --accent-soft: #242759;
+        --accent-warm: #E0A94D;
+
+        /* Status Colors Dark */
+        --status-pending-bg: #3A2E13;
+        --status-pending-text: #E3B15C;
+        --status-process-bg: #242759;
+        --status-process-text: #A3ACF7;
+        --status-done-bg: #173226;
+        --status-done-text: #7FCBA0;
+        --status-cancel-bg: #3A1E1A;
+        --status-cancel-text: #E38F7E;
+    }
+
+    body {
+        @apply bg-[var(--bg-main)] text-[var(--text-ink)] antialiased;
+    }
+}
